@@ -1,0 +1,9 @@
+.git/
+.venv/
+.env
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+README.md
+train.py
