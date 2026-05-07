@@ -29,3 +29,15 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 print(f"\nTraining samples: {len(X_train)}")
 print(f"Testing samples: {len(X_test)}")
+
+# ── Train Model ────────────────────────────────────────
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+coefficients = pd.DataFrame({
+    'Feature': X.columns,
+    'Coefficient': model.coef_
+})
+print("\nModel Coefficients:")
+print(coefficients)
+print(f"Intercept: {model.intercept_:.2f}")
