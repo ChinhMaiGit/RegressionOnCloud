@@ -51,3 +51,16 @@ r2 = r2_score(y_test, y_pred)
 
 print(f"\nRMSE: {rmse:.2f}")
 print(f"R²:   {r2:.2f}")
+
+# ── Save Model ─────────────────────────────────────────
+with open('model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+
+print("\nModel saved as model.pkl ✅")
+
+# ── Test Loading ───────────────────────────────────────
+with open('model.pkl', 'rb') as f:
+    loaded_model = pickle.load(f)
+
+test_prediction = loaded_model.predict(X_test[:5])
+print(f"Test predictions from loaded model: {test_prediction}")
