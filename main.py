@@ -16,3 +16,16 @@ print("First 5 rows:")
 print(df.head())
 print("\nData Summary:")
 print(df.describe())
+
+# ── Split Data ─────────────────────────────────────────
+X = df.drop('Price', axis=1)
+y = df['Price']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.2,
+    random_state=42
+)
+
+print(f"\nTraining samples: {len(X_train)}")
+print(f"Testing samples: {len(X_test)}")
