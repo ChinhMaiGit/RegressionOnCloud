@@ -66,7 +66,7 @@ The California Housing dataset used in this project is a well known
 educational dataset. The predictions made by this model are for
 **learning purposes only** and should not be used for real world
 house price predictions.
-```
+
 
 ---
 
