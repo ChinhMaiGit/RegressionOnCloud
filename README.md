@@ -177,3 +177,115 @@ house-price-model/
 | Docker | Containerization |
 | Git | Version control |
 ```
+
+Here are a few ways to fetch data from the API using the terminal:
+
+---
+
+## 🔍 GET Requests
+
+### Check if API is Running
+```bash
+# Windows (PowerShell)
+Invoke-WebRequest -Uri "http://localhost:8000" -Method GET
+
+# Mac/Linux
+curl http://localhost:8000
+```
+
+### Health Check
+```bash
+# Windows (PowerShell)
+Invoke-WebRequest -Uri "http://localhost:8000/health" -Method GET
+
+# Mac/Linux
+curl http://localhost:8000/health
+```
+
+---
+
+## 🏠 POST Request - Get a Prediction
+
+### 🪟 Windows (PowerShell)
+```powershell
+Invoke-WebRequest -Uri "http://localhost:8000/predict" `
+  -Method POST `
+  -Headers @{"Content-Type" = "application/json"} `
+  -Body '{
+    "MedInc": 8.3252,
+    "HouseAge": 41.0,
+    "AveRooms": 6.984,
+    "AveBedrms": 1.024,
+    "Population": 322.0,
+    "AveOccup": 2.555,
+    "Latitude": 37.88,
+    "Longitude": -122.23
+  }'
+```
+
+### 🍎 Mac / 🐧 Linux
+```bash
+curl -X POST "http://localhost:8000/predict" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "MedInc": 8.3252,
+    "HouseAge": 41.0,
+    "AveRooms": 6.984,
+    "AveBedrms": 1.024,
+    "Population": 322.0,
+    "AveOccup": 2.555,
+    "Latitude": 37.88,
+    "Longitude": -122.23
+  }'
+```
+
+---
+
+## ✅ Expected Response
+
+```json
+{
+    "predicted_price": 4.13,
+    "unit": "100,000 USD",
+    "note": "Multiply by 100,000 to get the actual price in USD"
+}
+```
+
+---
+
+## 💡 Bonus - Pretty Print the Response
+
+### 🪟 Windows (PowerShell)
+```powershell
+# Install Python json tool if needed
+Invoke-WebRequest -Uri "http://localhost:8000/predict" `
+  -Method POST `
+  -Headers @{"Content-Type" = "application/json"} `
+  -Body '{
+    "MedInc": 8.3252,
+    "HouseAge": 41.0,
+    "AveRooms": 6.984,
+    "AveBedrms": 1.024,
+    "Population": 322.0,
+    "AveOccup": 2.555,
+    "Latitude": 37.88,
+    "Longitude": -122.23
+  }' | ConvertFrom-Json
+```
+
+### 🍎 Mac / 🐧 Linux
+```bash
+curl -X POST "http://localhost:8000/predict" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "MedInc": 8.3252,
+    "HouseAge": 41.0,
+    "AveRooms": 6.984,
+    "AveBedrms": 1.024,
+    "Population": 322.0,
+    "AveOccup": 2.555,
+    "Latitude": 37.88,
+    "Longitude": -122.23
+  }' | python -m json.tool
+```
+
