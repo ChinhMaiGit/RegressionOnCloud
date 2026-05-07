@@ -1,7 +1,72 @@
-# 🏠 House Price Prediction Model
+## 📖 About This Project
 
-A simple **Linear Regression** model that predicts California house prices,
-served through a **FastAPI** REST API and containerized with **Docker**.
+This project is designed for **educational purposes** to demonstrate how to build
+and deploy a complete machine learning pipeline from scratch. It is a great
+starting point for anyone who wants to learn how to:
+
+- 🧠 **Build a Machine Learning Model** - Train a simple Linear Regression model
+  using Python and Scikit-learn on the California Housing dataset
+- 🔌 **Build a REST API** - Wrap the model with FastAPI to create a clean and
+  interactive API that others can use to make predictions
+- 🐳 **Containerize with Docker** - Package the entire application into a Docker
+  image so it can run consistently on any machine
+- 🐙 **Deploy to GitHub** - Manage and share the project using Git and GitHub
+  so others can clone, run, and build on top of it
+
+---
+
+## 🎯 What You Will Learn
+
+By following this project, you will learn:
+
+| Topic | What You Learn |
+|-------|---------------|
+| **Python** | Writing clean and structured Python code |
+| **Scikit-learn** | Loading datasets, training and evaluating ML models |
+| **FastAPI** | Building REST APIs with automatic documentation |
+| **Docker** | Writing Dockerfiles and building container images |
+| **Git & GitHub** | Version control and code sharing |
+| **uv** | Modern Python package management |
+
+---
+
+## 💡 Why This Project?
+
+Most machine learning tutorials stop at **training the model**. This project
+goes beyond that and shows you the **full pipeline** that is used in the
+real world:
+
+```
+Train Model → Save Model → Build API → Containerize → Deploy
+```
+
+Once you understand this pipeline with a simple **Linear Regression** model,
+you can swap it with any other model such as:
+- 🌲 Random Forest
+- 📈 XGBoost
+- 🧠 Neural Networks
+
+The **Docker, API and GitHub** steps will remain exactly the same!
+
+---
+
+## 👥 Who Is This For?
+
+This project is perfect for:
+- 🎓 **Students** learning machine learning and software engineering
+- 👨‍💻 **Developers** transitioning into machine learning
+- 📊 **Data Scientists** who want to learn how to deploy their models
+- 🤓 **Curious minds** who want to understand the full ML pipeline
+
+---
+
+## ⚠️ Disclaimer
+
+The California Housing dataset used in this project is a well known
+educational dataset. The predictions made by this model are for
+**learning purposes only** and should not be used for real world
+house price predictions.
+```
 
 ---
 
