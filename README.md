@@ -1,3 +1,5 @@
+# Regression On Cloud
+
 ## 📖 About This Project
 
 This project is designed for **educational purposes** to demonstrate how to build
@@ -13,7 +15,7 @@ starting point for anyone who wants to learn how to:
 - 🐙 **Deploy to GitHub** - Manage and share the project using Git and GitHub
   so others can clone, run, and build on top of it
 
----
+
 
 ## 🎯 What You Will Learn
 
@@ -28,7 +30,7 @@ By following this project, you will learn:
 | **Git & GitHub** | Version control and code sharing |
 | **uv** | Modern Python package management |
 
----
+
 
 ## 💡 Why This Project?
 
@@ -48,7 +50,7 @@ you can swap it with any other model such as:
 
 The **Docker, API and GitHub** steps will remain exactly the same!
 
----
+
 
 ## 👥 Who Is This For?
 
@@ -58,7 +60,7 @@ This project is perfect for:
 - 📊 **Data Scientists** who want to learn how to deploy their models
 - 🤓 **Curious minds** who want to understand the full ML pipeline
 
----
+
 
 ## ⚠️ Disclaimer
 
@@ -68,7 +70,7 @@ educational dataset. The predictions made by this model are for
 house price predictions.
 
 
----
+
 
 ## 🛠️ Prerequisites
 
@@ -79,7 +81,7 @@ Make sure you have these installed before starting:
 - [Git](https://git-scm.com/downloads)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
----
+
 
 ## ⚙️ Installation
 
@@ -112,7 +114,7 @@ brew install --cask docker
 sudo apt install docker-ce
 ```
 
----
+
 
 ## 📥 Clone the Repository
 
@@ -124,7 +126,7 @@ git clone https://github.com/YOUR_USERNAME/house-price-model.git
 cd house-price-model
 ```
 
----
+
 
 ## 📦 Set Up the Environment
 
@@ -133,7 +135,7 @@ cd house-price-model
 uv sync
 ```
 
----
+
 
 ## 🧠 Retrain the Model
 
@@ -149,7 +151,7 @@ This will:
 - Train the linear regression model ✅
 - Save the model as `model.pkl` ✅
 
----
+
 
 ## ▶️ Run the API Locally
 
@@ -165,7 +167,7 @@ Then open these URLs in your browser:
 | `http://localhost:8000/health` | Health check |
 | `http://localhost:8000/docs` | Interactive API documentation |
 
----
+
 
 ## 🏠 Test a Prediction
 
@@ -194,7 +196,7 @@ Expected response:
 }
 ```
 
----
+
 
 ## 🐳 Build and Run Docker Image
 
@@ -211,7 +213,7 @@ docker run -p 8000:8000 house-price-model
 ### 3. Test it
 Open `http://localhost:8000` in your browser ✅
 
----
+
 
 ## 📁 Project Structure
 
@@ -228,7 +230,7 @@ house-price-model/
 └── README.md           ← you are here!
 ```
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -241,11 +243,13 @@ house-price-model/
 | uv | Package manager |
 | Docker | Containerization |
 | Git | Version control |
-```
+
+
+## 🔢 Communication with the API through terminal
 
 Here are a few ways to fetch data from the API using the terminal:
 
----
+
 
 ## 🔍 GET Requests
 
@@ -267,7 +271,7 @@ Invoke-WebRequest -Uri "http://localhost:8000/health" -Method GET
 curl http://localhost:8000/health
 ```
 
----
+
 
 ## 🏠 POST Request - Get a Prediction
 
@@ -304,7 +308,7 @@ curl -X POST "http://localhost:8000/predict" \
   }'
 ```
 
----
+
 
 ## ✅ Expected Response
 
@@ -316,7 +320,7 @@ curl -X POST "http://localhost:8000/predict" \
 }
 ```
 
----
+
 
 ## 💡 Bonus - Pretty Print the Response
 
