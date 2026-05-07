@@ -1,0 +1,18 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# uv
+.venv/
+
+# model file
+model.pkl
+
+# environment variables
+.env
+
+# os files
+.DS_Store
+Thumbs.db
