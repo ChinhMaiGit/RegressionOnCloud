@@ -120,13 +120,15 @@ sudo apt install docker-ce
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/house-price-model.git
+git clone https://github.com/YOUR_USERNAME/PROJECT_NAME
 
 # Navigate into it
-cd house-price-model
+cd PROJECT_NAME
 ```
 
+Change `YOUR_USERNAME` and `PROJECT_NAME` to your corresponding github name and chosen project name, for this repo, the full link is:
 
+`https://github.com/ChinhMaiGit/RegressionOnCloud`
 
 ## 📦 Set Up the Environment
 
