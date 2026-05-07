@@ -177,13 +177,3 @@ house-price-model/
 | Docker | Containerization |
 | Git | Version control |
 ```
-
----
-
-## 💾 Save and Push to GitHub
-
-```bash
-git add README.md
-git commit -m "Add README with full setup instructions"
-git push
-```
